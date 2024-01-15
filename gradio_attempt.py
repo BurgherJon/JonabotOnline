@@ -21,7 +21,8 @@ from utils import bedrock
 
 boto3_bedrock = bedrock.get_bedrock_client(
     assumed_role=os.environ.get("BEDROCK_ASSUME_ROLE", None),
-    region=os.environ.get("AWS_DEFAULT_REGION", None)
+    # region="os.environ.get("AWS_DEFAULT_REGION", None)" Not using this on this version because I want to load from an EC2 that doesn't have a specified region in the credentials file.
+    region="us-east-1" #Hard coding as a shortcut.
 )
 
 #This creates and answers the questions.
