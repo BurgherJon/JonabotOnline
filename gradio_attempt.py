@@ -110,4 +110,4 @@ wrapper_store_faiss = VectorStoreIndexWrapper(vectorstore=vectorstore_faiss_jona
 
 #Launch the App
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(root_path="/jonabot_demo", server_name="0.0.0.0")
